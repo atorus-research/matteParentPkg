@@ -16,7 +16,7 @@ app_server <- function(input, output, session) {
 
     # Local storage in data folder
     if (dev_data_loc_type == "LOCAL") {
-      parentApp::run_data_prep_local_data_folder(dev_data_loc)
+      matte::run_data_prep_local_data_folder(dev_data_loc)
     }
   }
 
