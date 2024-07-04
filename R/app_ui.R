@@ -6,15 +6,15 @@
 #' @export
 #' @noRd
 app_ui <- function(input, output, session) {
-  page_navbar(
+  bslib::page_navbar(
     id = "page",
     title = "Parent Package",
-    theme = bs_theme(version = 4, bootswatch = "minty"), # Using a Bootswatch theme
-    nav_panel(
+    theme = bslib::bs_theme(version = 4, bootswatch = "minty"), # Using a Bootswatch theme
+    bslib::nav_panel(
       title = "Plot",
       plotUI("plot"),
     ),
-    nav_panel(
+    bslib::nav_panel(
       title = "Table",
       tableUI("table")
     )
