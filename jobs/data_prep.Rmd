@@ -8,7 +8,7 @@ params:
 library(dplyr)
 library(readr)
 
-path_adam <- '/sasdata/Data/Development/BDM/R3767/R3767-ONC/R3767-ONC-2011/data/ADaM/'  ##not relevant at the moment
+mtcars <- readRDS("data/mtcars.rds")
 
 mtcars_new <- mtcars %>%
   mutate(mpg_rank = dense_rank(desc(mpg)),
@@ -25,9 +25,6 @@ if (Sys.getenv("R_CONFIG_ACTIVE") == "rsconnect" || params$prod) {  ##not releva
   output_path <- file.path(getwd(), "data.rds")
 }
 
-
-
 saveRDS(mtcars_new, output_path)
 print(paste("File published to", output_path))
-
 ```
