@@ -1,8 +1,10 @@
+#' @export
 plotUI <- function(id) {
   ns <- NS(id)
   shiny::plotOutput(ns("plot"))
 }
 
+#' @export
 plotServer <- function(id, data, metadata) {
   moduleServer(
     id,

@@ -2,7 +2,11 @@
 
 export(app_ui)
 export(golem_add_external_resources)
+export(plotServer)
+export(plotUI)
 export(run_app)
+export(tableServer)
+export(tableUI)
 import(bslib)
 import(dplyr)
 import(ggplot2)

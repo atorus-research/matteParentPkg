@@ -1,3 +1,4 @@
+#' @export
 tableUI <- function(id) {
   ns <- NS(id)
   tagList(
@@ -5,6 +6,7 @@ tableUI <- function(id) {
   )
 }
 
+#' @export
 tableServer <- function(id, data, metadata) {
   moduleServer(
     id,
