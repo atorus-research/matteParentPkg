@@ -8,7 +8,7 @@ params:
 library(dplyr)
 library(readr)
 
-mtcars <- readRDS("data/mtcars.rds")
+mtcars <- readRDS("../data/mtcars.rds")
 
 mtcars_new <- mtcars %>%
   mutate(mpg_rank = dense_rank(desc(mpg)),
